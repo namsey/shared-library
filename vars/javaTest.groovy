@@ -1,5 +1,5 @@
 def call () {
-  echo 'testing java code'
+  sh 'mvn test'
 
 }
 

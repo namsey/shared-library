@@ -1,3 +1,3 @@
 def call (){
-  echo 'building java code'
+  sh 'mvn clean install'
 }
