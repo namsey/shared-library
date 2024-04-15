@@ -1,3 +1,3 @@
 def call (){
-  echo 'build stage'
+  echo 'building java code'
 }
