@@ -1,8 +1,8 @@
 def call(gateName) {
 // Access SonarQube server details from Jenkins credentials
-def sonarqubeUrl = credentials('SONARQUBE_SERVER_URL')
-def sonarqubeUsername = credentials('SONARQUBE_USERNAME')
-def sonarqubePassword = credentials('SONARQUBE_PASSWORD')
+def sonarqubeUrl = credentials('http://192.168.1.8:9000/')
+def sonarqubeUsername = credentials('admin')
+def sonarqubePassword = credentials('sonar')
 // Define the SonarQube API endpoint for quality gate status
 def apiUrl = "${sonarqubeUrl}/api/qualitygates/project_status?projectKey=\${JOB_NAME}&gateId=\${gateName}"
 // Use 'sh' step to execute curl command and capture response
