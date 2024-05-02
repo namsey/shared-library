@@ -2,8 +2,8 @@ def call(httpUrl, username, password) {
 def qualityGateProjectStatus = httpRequest(
 url: httpUrl,
 authentication: 'USERNAME_PASSWORD',
-username: sonar,
-password: sonar
+username: username,
+password: password
 ).content
 def qualityGate = new groovy.json.JsonSlurper().parseText(qualityGateProjectStatus)
 if (qualityGate.status.condition.error) {
